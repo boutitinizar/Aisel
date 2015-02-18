@@ -13,11 +13,17 @@ file that was distributed with this source code.
         <div class="row aisel-login" style="">
 
             <div class="col-md-4">
+
             </div>
             <div class="col-md-4">
                 <h1 class="text-center">Config Administration</h1>
 
                 <div class="jumbotron">
+                    {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error.message }}
+                        </div>
+                    {% endif %}
                     <div class="container">
                         <form action="{{ path("admin_login_check") }}" class="form-data" method="post">
 
