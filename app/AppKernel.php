@@ -50,10 +50,8 @@ class AppKernel extends Kernel
             new Aisel\ConfigBundle\AiselConfigBundle(),
             new Aisel\SettingsBundle\AiselSettingsBundle(),
             new Aisel\SitemapBundle\AiselSitemapBundle(),
-            new Aisel\ResourceBundle\AiselResourceBundle(),
             new Aisel\InstallerBundle\AiselInstallerBundle(),
-            new Aisel\FixtureBundle\AiselFixtureBundle(),
-
+            new Config\FixtureBundle\ConfigFixtureBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

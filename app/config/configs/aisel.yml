@@ -29,8 +29,6 @@ aisel_config:
             order: 30
             controller: AiselSettingsBundle:ConfigGeneral:modify
 
-aisel_fixture:
-    xml_path: /fixtures/xml
 
 aisel_order:
     payment_methods:

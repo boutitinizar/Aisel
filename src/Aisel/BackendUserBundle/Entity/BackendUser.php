@@ -322,9 +322,10 @@ class BackendUser implements AdvancedUserInterface
      * @param  \DateTime   $createdAt
      * @return BackendUser
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt = Null )
     {
-        $this->createdAt = $createdAt;
+
+        $this->createdAt = null === $createdAt ? new \DateTime():$createdAt;
 
         return $this;
     }
@@ -345,9 +346,10 @@ class BackendUser implements AdvancedUserInterface
      * @param  \DateTime   $updatedAt
      * @return BackendUser
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt($updatedAt = null)
     {
-        $this->updatedAt = $updatedAt;
+
+        $this->updatedAt = null === $updatedAt ? new \DateTime():$updatedAt;
 
         return $this;
     }
@@ -368,10 +370,9 @@ class BackendUser implements AdvancedUserInterface
      * @param  \DateTime   $expiresAt
      * @return BackendUser
      */
-    public function setExpiresAt($expiresAt)
+    public function setExpiresAt($expiresAt = null)
     {
-        $this->expiresAt = $expiresAt;
-
+        $this->expiresAt = null === $expiresAt ? new \DateTime():$expiresAt;
         return $this;
     }
 

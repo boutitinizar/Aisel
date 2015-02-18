@@ -24,14 +24,14 @@ security:
             context:            admin
             form_login:
                 provider:       user_backend
-                login_path:     /%website_admin%/%locale%/login
-                check_path:     /%website_admin%/%locale%/login_check
-                default_target_path: /%website_admin%/%locale%/dashboard
+                login_path:     /%website_admin%/login
+                check_path:     /%website_admin%/login_check
+                default_target_path: /%website_admin%/dashboard
                 use_forward:    true
                 failure_path:   null
             logout:
-                path:           /%website_admin%/%locale%/logout
-                target:         /%website_admin%/%locale%/
+                path:           /%website_admin%/logout
+                target:         /%website_admin%/login
             anonymous:          false
 
         user:

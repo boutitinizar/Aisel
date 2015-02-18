@@ -6,15 +6,15 @@
 # file that was distributed with this source code.
 
 admin_login:
-    pattern:   /%website_admin%/%locale%/login
+    pattern:   /%website_admin%/login
     defaults:  { _controller: AiselBackendUserBundle:Login:login }
     requirements:
         _method: GET
 
 admin_login_check:
-    pattern:   /%website_admin%/%locale%/login_check
+    pattern:   /%website_admin%/login_check
 #    defaults:  { _controller: AiselAdminBundle:Login:logout }
 
 admin_logout:
-    pattern:   /%website_admin%/%locale%/logout
+    pattern:   /%website_admin%/logout
 #    defaults:  { _controller: AiselAdminBundle:Login:check }
